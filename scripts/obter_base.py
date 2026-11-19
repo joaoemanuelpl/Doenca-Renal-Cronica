@@ -10,13 +10,17 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / 'data'
 DATA_PATH = DATA_DIR / 'ckd_uci.csv'
 
-# Fonte oficial da base de dados
-SOURCE_URL = 'https://archive.ics.uci.edu/static/public/336/data.csv'
+# Endereço da base armazenada no GitHub
+SOURCE_URL = (
+    'https://raw.githubusercontent.com/'
+    'joaoemanuelpl/Doenca-Renal-Cronica/'
+    'main/data/ckd_uci.csv.csv'
+)
 
-# Hash SHA-256 esperado para verificar a integridade
+# Hash SHA-256 da cópia utilizada no projeto
 EXPECTED_SHA256 = (
-    '0eeea8d17f5ad8792d854999d6ddf1602'
-    'ec4e116616f6ccdfdaef0ba8109e694'
+    'dbc44321265b9d447280a126c6188b5feb'
+    '0d856ce722baf9c0431e33477dbcdb'
 )
 
 
@@ -26,9 +30,8 @@ def calcular_sha256(caminho):
 
 
 def obter_base():
-    """Baixa a base CKD e verifica sua integridade."""
+    """Obtém a base e verifica sua integridade."""
 
-    # Cria a pasta de dados caso ela não exista
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
     if DATA_PATH.exists():
@@ -36,9 +39,8 @@ def obter_base():
         actual_sha256 = calcular_sha256(DATA_PATH)
 
     else:
-        print('Realizando download da base de dados...')
+        print('Baixando a base do repositório GitHub...')
 
-        # Utiliza um arquivo temporário durante o download
         temp_path = DATA_PATH.with_name(DATA_PATH.name + '.part')
 
         try:
@@ -47,23 +49,21 @@ def obter_base():
 
             if actual_sha256 != EXPECTED_SHA256:
                 raise ValueError(
-                    'A integridade da base não foi confirmada.'
+                    'O hash da base não corresponde ao esperado.'
                 )
 
-            # Move o arquivo para o diretório definitivo
             temp_path.replace(DATA_PATH)
 
         finally:
             if temp_path.exists():
                 temp_path.unlink()
 
-    # Confere a integridade do arquivo
     if actual_sha256 != EXPECTED_SHA256:
         raise ValueError(
-            'A base apresenta divergência em relação à versão verificada.'
+            'A integridade da base não foi confirmada.'
         )
 
-    print('Base disponível e integridade verificada com sucesso!')
+    print('Base disponível e integridade verificada!')
     print('Arquivo:', DATA_PATH)
 
 
