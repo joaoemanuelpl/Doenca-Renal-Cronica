@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# Google Colab e Jupyter
+.ipynb_checkpoints/
+
+# Arquivos temporários
+*.part
+*.tmp
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Configurações locais
+.env
+
+# Dados baixados automaticamente
+data/ckd_uci.csv
+
+# Resultados e arquivos locais
+marco1_colab_dados/
+resultados/
