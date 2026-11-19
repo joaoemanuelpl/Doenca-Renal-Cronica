@@ -24,11 +24,12 @@ A utilização da base com 400 registros foi autorizada pelo professor responsá
 
 ## Organização do projeto
 
-notebooks/
-├── Marco1_Doenca_Renal_Cronica_Colab.ipynb
-└── Marco2_Doenca_Renal_Cronica_Colab.ipynbsupervisionados.
+- `notebooks/Marco1_Doenca_Renal_Cronica_Colab.ipynb` — descrição da base, limpeza, análise exploratória, pré-processamento e modelo baseline.
+- `notebooks/Marco2_Doenca_Renal_Cronica_Colab.ipynb` — desenvolvimento e comparação dos modelos supervisionados e não supervisionados.
 - `scripts/` — scripts auxiliares para obtenção e preparação dos dados.
 - `data/` — arquivos de dados, quando aplicável.
+- `AUTORES.md` — identificação dos integrantes e suas responsabilidades.
+- `requirements.txt` — dependências necessárias para executar o projeto.
 
 ## Tecnologias utilizadas
 
