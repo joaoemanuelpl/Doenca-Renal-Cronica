@@ -24,8 +24,9 @@ A utilização da base com 400 registros foi autorizada pelo professor responsá
 
 ## Organização do projeto
 
-- `notebooks/01_marco1_dados_eda_baseline.ipynb` — descrição, limpeza, análise exploratória, pré-processamento e modelo baseline.
-- `notebooks/02_marco2_modelos_avaliacao.ipynb` — desenvolvimento e comparação dos modelos supervisionados e não supervisionados.
+notebooks/
+├── Marco1_Doenca_Renal_Cronica_Colab.ipynb
+└── Marco2_Doenca_Renal_Cronica_Colab.ipynbsupervisionados.
 - `scripts/` — scripts auxiliares para obtenção e preparação dos dados.
 - `data/` — arquivos de dados, quando aplicável.
 
