@@ -6,7 +6,7 @@
 
 ## Sobre o projeto
 
-Este projeto tem como objetivo desenvolver um fluxo de aprendizagem de máquina aplicado à classificação de registros relacionados à doença renal crônica (DRC).
+Este projeto desenvolve um fluxo de aprendizagem de máquina aplicado à classificação de registros relacionados à doença renal crônica (DRC).
 
 São utilizados dados clínicos e laboratoriais para analisar, preparar e desenvolver modelos capazes de classificar os registros nas categorias `ckd` e `notckd`.
 
@@ -36,11 +36,11 @@ Contempla a descrição da base, limpeza e auditoria dos dados, análise explora
 
 **Marco 2 — Modelos e avaliação comparativa**
 
-Em desenvolvimento.
+[![Abrir no Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/joaoemanuelpl/Doenca-Renal-Cronica/blob/main/notebooks/Marco2_Doenca_Renal_Cronica_Colab.ipynb)
 
-Arquivo previsto: `notebooks/Marco2_Doenca_Renal_Cronica_Colab.ipynb`
+Arquivo: `notebooks/Marco2_Doenca_Renal_Cronica_Colab.ipynb`
 
-Contemplará o desenvolvimento dos modelos supervisionados e não supervisionados, validação cruzada e comparação dos resultados.
+Contempla a aplicação do K-Means, Árvore de Decisão, KNN, Naive Bayes e Rede Neural (MLP), além de interpretação dos modelos, validação cruzada e comparação dos resultados.
 
 ### Scripts
 
@@ -53,26 +53,11 @@ Contemplará o desenvolvimento dos modelos supervisionados e não supervisionado
 - `requirements.txt` — dependências necessárias para executar o projeto.
 - `.gitignore` — define arquivos e diretórios que não devem ser enviados ao GitHub.
 
-## Tecnologias utilizadas
+## Resultados principais
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Scikit-learn
-- SciPy
-- IPython
-- Google Colab
-
-## Autores
-
-- João Emanuel Pinheiro
-- Gabriel Santana
-- Iago Rodrigues
-- Nithielly Tamily
-
-## Situação do projeto
-
-Projeto acadêmico desenvolvido para a disciplina de Aprendizagem de Máquina (ADS033), no semestre 2026/2.
-
-O desenvolvimento está organizado em dois marcos, acompanhando as etapas e os requisitos estabelecidos na proposta da disciplina.
+| Modelo | Acurácia na validação | Acurácia na validação cruzada |
+|---|---:|---:|
+| Baseline | 62,5% | 62,5% |
+| Árvore de Decisão | 97,5% | 96,3% |
+| KNN | 96,25% | 94,2% |
+| Na
