@@ -53,11 +53,10 @@ Contempla a aplicação do K-Means, Árvore de Decisão, KNN, Naive Bayes e Rede
 - `requirements.txt` — dependências necessárias para executar o projeto.
 - `.gitignore` — define arquivos e diretórios que não devem ser enviados ao GitHub.
 
-## Resultados principais
-
-| Modelo | Acurácia na validação | Acurácia na validação cruzada |
-|---|---:|---:|
-| Baseline | 62,5% | 62,5% |
-| Árvore de Decisão | 97,5% | 96,3% |
-| KNN | 96,25% | 94,2% |
-| Na
+| **Modelo**        | **Acurácia na validação** | **Acurácia na validação cruzada** |
+| ----------------- | ------------------------- | --------------------------------- |
+| Baseline          | 62,5%                     | 62,5%                             |
+| Árvore de Decisão | 97,5%                     | 96,3%                             |
+| KNN               | 96,25%                    | 94,2%                             |
+| Naive Bayes       | 100%                      | 98,3%                             |
+| MLP (Rede Neural) | 91,25%                    | 92,1%                             |
